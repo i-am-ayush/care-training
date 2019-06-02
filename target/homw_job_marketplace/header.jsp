@@ -24,7 +24,7 @@
     else {
         profilePage = "sitterprofile.jsp";
         page2 = "Apply New Job";
-        page2url = "applynewjob.jsp";
+        page2url = "applynewjob";
         homepage = "sitteraccount.jsp";
     }
 %>

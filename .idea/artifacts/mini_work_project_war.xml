@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="mini-work-project:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="homw_job_marketplace.war">
-      <element id="artifact" artifact-name="mini-work-project:war exploded" />
-    </root>
-  </artifact>
-</component>
