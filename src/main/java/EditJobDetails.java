@@ -49,12 +49,6 @@ public class EditJobDetails extends HttpServlet {
         if(JobService.editJobPost(job)==true){
             RequestDispatcher rd = req.getRequestDispatcher("accountserve");
             rd.forward(req, resp);
-            System.out.println(job.getId());
-            System.out.println(job.getTitle());
-            System.out.println(job.getPostedBy());
-            System.out.println(job.getStartDateTime());
-            System.out.println(job.getEndDateTime());
-            System.out.println(job.getPayPerHour());
         }
         else {
             PrintWriter out = resp.getWriter();

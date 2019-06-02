@@ -1,10 +1,4 @@
-<%@ page import="bean.Seeker" %><%--
-  Created by IntelliJ IDEA.
-  User: Amber
-  Date: 5/30/2019
-  Time: 5:18 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="bean.Seeker" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     Seeker seeker = (Seeker) session.getAttribute("member");

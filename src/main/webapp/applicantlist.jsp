@@ -2,13 +2,7 @@
 <%@ page import="bean.Application" %>
 <%@ page import="service.ApplicationService" %>
 <%@ page import="bean.Member" %>
-<%@ page import="service.MemberService" %><%--
-  Created by IntelliJ IDEA.
-  User: Amber
-  Date: 5/31/2019
-  Time: 10:09 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="service.MemberService" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="header.jsp"/>
 

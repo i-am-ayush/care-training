@@ -1,12 +1,6 @@
 <%@ page import="bean.Member" %>
 <%@ page import="bean.Seeker" %>
-<%@ page import="static java.lang.System.exit" %><%--
-  Created by IntelliJ IDEA.
-  User: Amber
-  Date: 5/30/2019
-  Time: 5:05 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="static java.lang.System.exit" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     Member member = (Member) session.getAttribute("member");
