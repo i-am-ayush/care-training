@@ -8,6 +8,7 @@ form\RegisterSeekerForm.class
 dao\SitterDao.class
 listener\OnStart.class
 bean\Application.class
+SitterAccount.class
 dao\DatabaseConnector.class
 form\LoginForm.class
 bean\Seeker.class
@@ -15,6 +16,7 @@ form\CloseJobForm.class
 dao\ApplicationDao.class
 bean\Member.class
 bean\Sitter.class
+dto\SitterProfileHome.class
 form\RegisterSitterForm.class
 dao\SeekerDao.class
 form\Form.class

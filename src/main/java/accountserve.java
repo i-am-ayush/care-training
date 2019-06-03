@@ -27,8 +27,10 @@ public class accountserve extends HttpServlet {
             out.println("Please login first.");
         }
         else {
-            if(member.getType() == Member.MemberType.SITTER)
-                resp.sendRedirect("sitteraccount.jsp");
+            if(member.getType() == Member.MemberType.SITTER) {
+                RequestDispatcher rd = req.getRequestDispatcher("sitteraccount");
+                rd.forward(req, resp);
+            }
             else
                 resp.sendRedirect("seekeraccount.jsp");
         }
