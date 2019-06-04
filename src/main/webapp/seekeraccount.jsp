@@ -35,7 +35,7 @@
         <td>${j.endDateTime}
         </td>
         <td>
-            <form method="POST" action="editjobdetails.jsp" style="display:inline">
+            <form method="POST" action="editjobdetailsform" style="display:inline">
                 <input type="text" value="${j.id}" name="id" hidden>
                 <button class="btn btn-xs btn-success" type="submit">
                     <i class="glyphicon glyphicon-edit"></i> Edit Job

@@ -7,23 +7,23 @@ import java.util.List;
 
 public class JobService {
 
-    public static boolean deleteJobById(int jobId){
+    public static boolean deleteJobById(int jobId) {
         return JobDao.delete(jobId);
     }
 
-    public static Job getJobById(int jobId){
+    public static Job getJobById(int jobId) {
         return JobDao.getById(jobId);
     }
 
-    public static boolean save(Job job){
+    public static boolean save(Job job) {
         return JobDao.save(job);
     }
 
-    public static boolean editJobPost(Job job){
+    public static boolean editJobPost(Job job) {
         return JobDao.update(job);
     }
 
-    public static List<Job> getAllJobs(){
+    public static List<Job> getAllJobs() {
         return JobDao.getAllJobs();
     }
 

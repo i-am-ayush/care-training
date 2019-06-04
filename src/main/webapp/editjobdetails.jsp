@@ -1,31 +1,24 @@
 <%@ page import="bean.Seeker" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<%@ page isELIgnored="false" %>
 <jsp:include page="header.jsp"/>
-<%
-    Seeker seeker = (Seeker) session.getAttribute("member");
-    int jobId = Integer.parseInt(request.getParameter("id"));
-%>
+
 <h3>Edit Job Details</h3>
 
 <form action="editjobdetails" method="POST">
 
-    <label for="jobId">Job ID</label>
-    <div class="form-group"><input type="text" class="form-control" value="<%=jobId%>" name="jobId" id="jobId" readonly/></div>
-
     <label for="jobtitle">Job Title</label>
-    <div class="form-group"><input type="text" class="form-control" name="jobtitle" id="jobtitle" /></div>
-
-    <label for="postedby">Posted by(Member ID)</label>
-    <div class="form-group"><input type="text" class="form-control" name="postedby" value="<%= seeker.getMemberId()%>" id="postedby" readonly /></div>
+    <div class="form-group"><input type="text" class="form-control" value="${requestScope.updateJob.title}" name="jobtitle" id="jobtitle" /></div>
 
     <label for="startdate">Start Date(dd/mm/yyyy)</label>
-    <div class="form-group"><input type="text" class="form-control" name="startdate" id="startdate" /></div>
+    <div class="form-group"><input type="text" class="form-control" value="${requestScope.updateJob.startDateTime}" name="startdate" id="startdate" /></div>
 
     <label for="enddate">End Date(dd/mm/yyyy)</label>
-    <div class="form-group"><input type="text" class="form-control" name="enddate" id="enddate" /></div>
+    <div class="form-group"><input type="text" class="form-control" value="${requestScope.updateJob.endDateTime}" name="enddate" id="enddate" /></div>
 
     <label for="jobtitle">Pay per hour</label>
-    <div class="form-group"><input type="text" class="form-control" name="payperhour"  /></div>
+    <div class="form-group"><input type="text" class="form-control" value="${requestScope.updateJob.payPerHour}" name="payperhour"  /></div>
 
     <div class="form-group"><button class="btn btn-primary" type="submit">Update</button></div>
 

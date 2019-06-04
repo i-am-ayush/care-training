@@ -6,6 +6,10 @@ public class Job {
     private int id;
     private String title;
     private int postedBy;
+    private Date startDateTime;
+    private Date endDateTime;
+    private double payPerHour;
+    private Status status;
 
     public int getId() {
         return id;
@@ -55,22 +59,22 @@ public class Job {
         this.payPerHour = payPerHour;
     }
 
-    private Date startDateTime;
-    private Date endDateTime;
-    private double payPerHour;
-    public enum Status {ACTIVE, INACTIVE;
-        public static Status stringToEnum(String s) {
-            if (s.equals("ACTIVE"))
-                return ACTIVE;
-            return INACTIVE;
-        }}
-    private Status status;
     public Status getStatus() {
         return status;
     }
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    public enum Status {
+        ACTIVE, INACTIVE;
+
+        public static Status stringToEnum(String s) {
+            if (s.equals("ACTIVE"))
+                return ACTIVE;
+            return INACTIVE;
+        }
     }
 
 }

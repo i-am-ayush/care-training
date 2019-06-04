@@ -88,6 +88,14 @@
     <servlet-name>SeekerAccountServlet</servlet-name>
     <servlet-class>SeekerAccountServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>EditJobDetailsFormServlet</servlet-name>
+    <servlet-class>EditJobDetailsFormServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditJobDetailsFormServlet</servlet-name>
+    <url-pattern>/editjobdetailsform</url-pattern>
+  </servlet-mapping>
   <servlet-mapping>
     <servlet-name>SeekerAccountServlet</servlet-name>
     <url-pattern>/seekeraccount</url-pattern>

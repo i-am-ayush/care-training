@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.ParseException;
@@ -16,41 +17,41 @@ public class EditJobDetails extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        Job job = new Job();
-
-
-        int jobId = Integer.parseInt(req.getParameter("jobId"));
+        HttpSession session = req.getSession();
+        Job job = (Job) session.getAttribute("Job");
         String title = req.getParameter("jobtitle");
-        int postedBy = Integer.parseInt(req.getParameter("postedby"));
         String sStartDate = req.getParameter("startdate");
-        Date startDate = null, endDate=null;
-        try {
-            startDate = new SimpleDateFormat("dd/MM/yyyy").parse(sStartDate);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
         String sEndDate = req.getParameter("enddate");
+        String pattern = "yyyy-MM-dd";
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+
         try {
-            endDate = new SimpleDateFormat("dd/MM/yyyy").parse(sEndDate);
+            Date date = simpleDateFormat.parse(sStartDate);
+            job.setStartDateTime(date);
+            Date date2 = simpleDateFormat.parse(sEndDate);
+            job.setEndDateTime(date2);
         } catch (ParseException e) {
             e.printStackTrace();
         }
+
+//        try {
+//            startDate = new SimpleDateFormat("yyyy/MM/dd").parse(sStartDate);
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
+//
+//        try {
+//            endDate = new SimpleDateFormat("yyyy/MM/dd").parse(sEndDate);
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
         Double payPerHour = Double.parseDouble(req.getParameter("payperhour"));
-
-        job.setId(jobId);
         job.setTitle(title);
-        job.setPostedBy(postedBy);
-        job.setStartDateTime(startDate);
-        job.setEndDateTime(endDate);
         job.setPayPerHour(payPerHour);
-
-
-        if(JobService.editJobPost(job)==true){
+        if (JobService.editJobPost(job) == true) {
             RequestDispatcher rd = req.getRequestDispatcher("accountserve");
             rd.forward(req, resp);
-        }
-        else {
+        } else {
             PrintWriter out = resp.getWriter();
             out.println("Error while editing new job");
         }
