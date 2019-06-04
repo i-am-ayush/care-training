@@ -316,7 +316,7 @@ public class ApplicationDao {
 //        Application ap=new Application();
 //        ap.setMemberId(8);
 //        ap.setJobId(2);
-//        ap.setExpectedPay(900);
+//        ap.setPayPerHour(900);
 //        save(ap);
 //        List<Map<String, Object>> l = new ArrayList<>();
 //

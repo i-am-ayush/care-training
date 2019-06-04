@@ -117,7 +117,7 @@ public class SitterDao {
 //        s.setLastName("jha");
 //        s.setPassword("rahul123");
 //        s.setPhoneNumber(990143288);
-//        s.setExpectedPay(750.0);
+//        s.setPayPerHour(750.0);
 //        s.setYearsOfExp(2);
 //        s.setType(Member.MemberType.SITTER);
 //        SitterDao.save(s);
