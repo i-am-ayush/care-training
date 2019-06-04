@@ -84,10 +84,13 @@
     <servlet-name>SitterAccount</servlet-name>
     <servlet-class>SitterAccount</servlet-class>
   </servlet>
-
+  <servlet>
+    <servlet-name>SeekerAccountServlet</servlet-name>
+    <servlet-class>SeekerAccountServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
-    <servlet-name>SitterAccount</servlet-name>
-    <url-pattern>/sitteraccount</url-pattern>
+    <servlet-name>SeekerAccountServlet</servlet-name>
+    <url-pattern>/seekeraccount</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>RegisterSeeker</servlet-name>

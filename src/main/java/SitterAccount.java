@@ -44,4 +44,8 @@ public class SitterAccount extends HttpServlet {
         req.setAttribute("appliedJobList",list);
         rd.forward(req, resp);
     }
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doPost(req, resp);
+    }
 }
