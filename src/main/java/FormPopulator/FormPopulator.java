@@ -29,6 +29,16 @@ public class FormPopulator {
 
         return null;
     }
+    public static <T extends Form> T populateFromDatabase(HttpServletRequest request, Class<T> tClass) {
+
+        try {
+            return populateFormFromDatabase(request, tClass);
+        } catch (Exception e) {
+            logger.error(e.getMessage(),e);
+        }
+
+        return null;
+    }
 
     public static <T extends Form> T populateForm(HttpServletRequest request, Class<T> tClass) throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException, ParseException {
         Field[] variables = tClass.getDeclaredFields();
@@ -74,7 +84,50 @@ public class FormPopulator {
         }
         return t;
     }
+    public static <T extends Form> T populateFormFromDatabase(HttpServletRequest request, Class<T> tClass) throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException, ParseException {
+        Field[] variables = tClass.getDeclaredFields();
+        T t = tClass.newInstance();
+        for (Field f : variables) {
+            System.out.println(f.getType());
+            Method fieldSetter = null;
+            fieldSetter = tClass.getMethod(setterMethodName(f),f.getType());
+            if(f.getType()==int.class) {
+                System.out.println("int1");
+                int i=Integer.parseInt(String.valueOf(request.getAttribute(f.getName())));
+                fieldSetter.invoke(t, i);
+                System.out.println("int");
+            }
+            else if(f.getType()== Date.class){
+                String pattern = "yyyy-MM-dd";
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+                Date date = simpleDateFormat.parse(String.valueOf(request.getAttribute(f.getName())));
+                fieldSetter.invoke(t,date);
+                System.out.println(date);
+            }
+            else if(f.getType()==double.class) {
+                System.out.println("int2");
+                fieldSetter.invoke(t, Double.parseDouble(String.valueOf(request.getAttribute(f.getName()))));
+                System.out.println("double");
+            }
+//            else if(f.getType()==Enum.class) {
+//
+//                if(request.getParameter(f.getName()).equals("seeker"))
+//                fieldSetter.invoke(t, Member.MemberType.SEEKER);
+//                else
+//                    fieldSetter.invoke(t, Member.MemberType.SITTER);
+//
+//
+//            }
 
+            else{
+                System.out.println("int3");
+                fieldSetter.invoke(t, request.getAttribute(f.getName()));
+                System.out.println("string");
+            }
+
+        }
+        return t;
+    }
     private static String setterMethodName(Field f) {
         String name = f.getName();
         name = name.substring(0, 1).toUpperCase() + name.substring(1);
