@@ -93,6 +93,10 @@
     <servlet-class>EditJobDetailsFormServlet</servlet-class>
   </servlet>
   <servlet-mapping>
+    <servlet-name>SitterAccount</servlet-name>
+    <url-pattern>/sitteraccount</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
     <servlet-name>EditJobDetailsFormServlet</servlet-name>
     <url-pattern>/editjobdetailsform</url-pattern>
   </servlet-mapping>
