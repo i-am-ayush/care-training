@@ -8,6 +8,17 @@ public class SitterProfileHome {
     private String status;
     private int applicationId;
 
+    @Override
+    public String toString() {
+        return "SitterProfileHome{" +
+                "title='" + title + '\'' +
+                ", payPerHour=" + payPerHour +
+                ", expectedPay=" + expectedPay +
+                ", status='" + status + '\'' +
+                ", applicationId=" + applicationId +
+                '}';
+    }
+
     public String getTitle() {
         return title;
     }

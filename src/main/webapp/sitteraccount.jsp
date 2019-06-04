@@ -40,7 +40,7 @@
                 <input type="text" value="${j.applicationId}" name="id" hidden>
                 <button class="btn btn-xs btn-danger" type="button" data-toggle="modal" data-target="#confirmDelete"
                         data-title="Delete Application"
-                        data-message="Are you sure you want to delete this application ?" <%=disabled%>>
+                        data-message="Are you sure you want to delete this application ?" <%= "enabled" %>>
                     <i class="glyphicon glyphicon-trash"></i> Delete Application
                 </button>
             </form>
