@@ -1,6 +1,7 @@
 package service;
 
 import bean.Member;
+import dao.JobDao;
 import dao.MemberDao;
 
 import java.util.LinkedList;
@@ -27,7 +28,9 @@ public class MemberService {
         return member;
     }
     public static boolean deleteMemberById(int id){
-        return MemberDao.delete(id);
+       MemberDao.delete(id);
+       JobService.deletebyId(id);
+       return true;
     }
 
     public static List<Member> search(String email){

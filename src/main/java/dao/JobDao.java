@@ -79,7 +79,20 @@ public class JobDao {
         }
         return null;
     }
-
+    public static boolean deleteById(int memberId) {
+        PreparedStatement stmt = null;
+        try {
+            stmt = conn.prepareStatement("UPDATE job "
+                    + "SET status='INACTIVE' "
+                    + "WHERE postedBy=?");
+            stmt.setInt(1, memberId);
+            stmt.executeUpdate();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
     public static boolean delete(int jobId) {
         PreparedStatement stmt = null;
         try {

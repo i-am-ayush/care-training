@@ -50,7 +50,7 @@ public class SeekerDao {
         }
 
     }
-    public boolean delete(int seekerId){
+    public static boolean delete(int seekerId){
         return MemberDao.delete(seekerId);
     }
     public static Seeker getById(int seekerId){

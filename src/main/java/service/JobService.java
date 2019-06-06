@@ -12,6 +12,14 @@ public class JobService {
         JobDao.delete(jobId);
         return ApplicationDao.deleteByJobId(jobId);
     }
+    public static boolean deletebyId(int memberId) {
+        JobDao.deleteById(memberId);
+        List<Job> list = JobDao.getJobsPostedBy(memberId);
+        for (int i = 0; i < list.size(); i++) {
+            ApplicationDao.deleteByJobId(list.get(i).getId());
+        }
+        return true;
+    }
 
     public static Job getJobById(int jobId) {
         return JobDao.getById(jobId);
