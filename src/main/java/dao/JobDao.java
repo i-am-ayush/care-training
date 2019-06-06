@@ -19,6 +19,8 @@ public class JobDao {
             stmt.setInt(2, job.getPostedBy());
             java.sql.Date sqlDate1 = new java.sql.Date(job.getStartDateTime().getTime());
             java.sql.Date sqlDate2 = new java.sql.Date(job.getEndDateTime().getTime());
+            System.out.println(sqlDate1);
+            System.out.println(sqlDate2);
             stmt.setDate(3, sqlDate1);
             stmt.setDate(4, sqlDate2);
             stmt.setDouble(5, job.getPayPerHour());
