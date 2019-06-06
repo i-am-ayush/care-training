@@ -1,6 +1,7 @@
 package service;
 
 import bean.Job;
+import dao.ApplicationDao;
 import dao.JobDao;
 
 import java.util.List;
@@ -8,7 +9,8 @@ import java.util.List;
 public class JobService {
 
     public static boolean deleteJobById(int jobId) {
-        return JobDao.delete(jobId);
+        JobDao.delete(jobId);
+        return ApplicationDao.deleteByJobId(jobId);
     }
 
     public static Job getJobById(int jobId) {
