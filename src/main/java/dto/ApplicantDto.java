@@ -3,6 +3,7 @@ package dto;
 public class ApplicantDto {
     private String name;
     private String status;
+    private double expectedPay;
 
     public String getName() {
         return name;
@@ -11,11 +12,6 @@ public class ApplicantDto {
     public void setName(String name) {
         this.name = name;
     }
-
-    private double expectedPay;
-
-
-
 
     public String getStatus() {
         return status;
