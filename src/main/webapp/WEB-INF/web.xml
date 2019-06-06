@@ -10,95 +10,95 @@
 
   <servlet>
     <servlet-name>RegisterSeeker</servlet-name>
-    <servlet-class>registerseeker</servlet-class>
+    <servlet-class>controller.servlet.RegisterSeekerServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>RegisterSitter</servlet-name>
-    <servlet-class>registersitter</servlet-class>
+    <servlet-class>controller.servlet.RegisterSitterServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>Login</servlet-name>
-    <servlet-class>login</servlet-class>
+    <servlet-class>controller.servlet.LoginServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>Logout</servlet-name>
-    <servlet-class>logout</servlet-class>
+    <servlet-class>controller.servlet.LogoutServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>ProfileRedirect</servlet-name>
-    <servlet-class>ProfileRedirect</servlet-class>
+    <servlet-class>controller.servlet.ProfileRedirectServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>EditProfileForm</servlet-name>
-    <servlet-class>EditProfileForm</servlet-class>
+    <servlet-class>controller.servlet.EditProfileFormServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>EditSeekerProfile</servlet-name>
-    <servlet-class>EditSeekerProfile</servlet-class>
+    <servlet-class>controller.servlet.EditSeekerProfileServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>EditSitterProfile</servlet-name>
-    <servlet-class>EditSitterProfile</servlet-class>
+    <servlet-class>controller.servlet.EditSitterProfileServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>DeleteSitterApplication</servlet-name>
-    <servlet-class>deletesitterapplication</servlet-class>
+    <servlet-class>controller.servlet.DeleteSitterApplicationServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>CloseAccount</servlet-name>
-    <servlet-class>closeaccount</servlet-class>
+    <servlet-class>controller.servlet.CloseAccountServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>ServeAccount</servlet-name>
-    <servlet-class>accountserve</servlet-class>
+    <servlet-class>controller.servlet.AccountServiceServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>CloseJob</servlet-name>
-    <servlet-class>CloseJob</servlet-class>
+    <servlet-class>controller.servlet.CloseJobServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>PostNewJob</servlet-name>
-    <servlet-class>PostNewJob</servlet-class>
+    <servlet-class>controller.servlet.PostNewJobServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>ApplicantList</servlet-name>
-    <servlet-class>ApplicantList</servlet-class>
+    <servlet-class>controller.servlet.ApplicantListServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>EditJob</servlet-name>
-    <servlet-class>EditJobDetails</servlet-class>
+    <servlet-class>controller.servlet.EditJobDetailsServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>ApplyNewJob</servlet-name>
-    <servlet-class>ApplyNewJob</servlet-class>
+    <servlet-class>controller.servlet.ApplyNewJobServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>ApplyJob</servlet-name>
-    <servlet-class>ApplyJob</servlet-class>
+    <servlet-class>controller.servlet.ApplyJobServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>Search</servlet-name>
-    <servlet-class>Search</servlet-class>
+    <servlet-class>controller.servlet.SearchServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>SitterAccount</servlet-name>
-    <servlet-class>SitterAccount</servlet-class>
+    <servlet-class>controller.servlet.SitterAccountServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>SeekerAccountServlet</servlet-name>
-    <servlet-class>SeekerAccountServlet</servlet-class>
+    <servlet-class>controller.servlet.SeekerAccountServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>EditJobDetailsFormServlet</servlet-name>
-    <servlet-class>EditJobDetailsFormServlet</servlet-class>
+    <servlet-class>controller.servlet.EditJobDetailsFormServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>SeekerProfile</servlet-name>
-    <servlet-class>SeekerProfile</servlet-class>
+    <servlet-class>controller.servlet.SeekerProfileServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>SitterProfileServlet</servlet-name>
-    <servlet-class>SitterProfileServlet</servlet-class>
+    <servlet-class>controller.servlet.SitterProfileServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>SitterProfileServlet</servlet-name>
@@ -193,11 +193,4 @@
     <servlet-name>Search</servlet-name>
     <url-pattern>/search</url-pattern>
   </servlet-mapping>
-  <jsp-config>
-    <jsp-property-group>
-      <url-pattern>*.jsp</url-pattern>
-      <el-enabled>true</el-enabled>
-      <scripting-enabled>true</scripting-enabled>
-    </jsp-property-group>
-  </jsp-config>
 </web-app>

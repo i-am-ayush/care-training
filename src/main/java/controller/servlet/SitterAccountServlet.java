@@ -1,3 +1,5 @@
+package controller.servlet;
+
 import FormPopulator.FormPopulator;
 import bean.Member;
 import bean.Sitter;
@@ -14,7 +16,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-public class SitterAccount extends HttpServlet {
+public class SitterAccountServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -23,7 +25,7 @@ public class SitterAccount extends HttpServlet {
 
         Member member = (Member) session.getAttribute("member");
         Sitter sitter = (Sitter) member;
-        List<SitterProfileHome> list = SitterService.allAppliedJobBySitter(sitter.getMemberId());
+        List<SitterProfileHome> list = SitterService.allAppliedJobBySitter(sitter.getId());
 
 //        for (Map<String, Object> appliedjobs : list) {
 //            String title = "", payperhour = "", expectedpay = "", status = "", disabled = "";

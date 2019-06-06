@@ -1,3 +1,5 @@
+package controller.servlet;
+
 import FormPopulator.FormPopulator;
 import bean.Job;
 import form.UpdatejobForm;
@@ -12,7 +14,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class EditJobDetails extends HttpServlet {
+public class EditJobDetailsServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

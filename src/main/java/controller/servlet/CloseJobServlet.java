@@ -1,3 +1,5 @@
+package controller.servlet;
+
 import FormPopulator.FormPopulator;
 import form.CloseJobForm;
 import service.JobService;
@@ -10,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class CloseJob extends HttpServlet {
+public class CloseJobServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         CloseJobForm closeJobForm=FormPopulator.populate(req,CloseJobForm.class);

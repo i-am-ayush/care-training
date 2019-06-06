@@ -1,3 +1,5 @@
+package controller.servlet;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,7 +16,7 @@ import dao.SitterDao;
 import form.RegisterSitterForm;
 import service.SitterService;
 
-public class registersitter extends HttpServlet {
+public class RegisterSitterServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

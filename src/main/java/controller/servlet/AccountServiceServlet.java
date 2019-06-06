@@ -1,3 +1,5 @@
+package controller.servlet;
+
 import bean.Member;
 
 import javax.servlet.RequestDispatcher;
@@ -13,7 +15,7 @@ import java.util.Collections;
 import java.util.Enumeration;
 import java.util.List;
 
-public class accountserve extends HttpServlet {
+public class AccountServiceServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

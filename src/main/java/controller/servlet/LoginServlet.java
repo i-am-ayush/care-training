@@ -1,3 +1,5 @@
+package controller.servlet;
+
 import FormPopulator.FormPopulator;
 import bean.Member;
 import bean.Seeker;
@@ -19,7 +21,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class login extends HttpServlet {
+public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         LoginForm loginForm=FormPopulator.populate(req,LoginForm.class);

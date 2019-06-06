@@ -1,5 +1,5 @@
-import FormPopulator.FormPopulator;
-import form.DeleteSitterApplicationForm;
+package controller.servlet;
+
 import service.ApplicationService;
 
 import javax.servlet.RequestDispatcher;
@@ -11,13 +11,12 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 
-public class deletesitterapplication extends HttpServlet {
+public class DeleteSitterApplicationServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        DeleteSitterApplicationForm deleteSitterApplicationForm= FormPopulator.populate(req,DeleteSitterApplicationForm.class);
 
-        int applicationId = deleteSitterApplicationForm.getId();
+        int applicationId = Integer.parseInt(req.getParameter("id"));
 
         if(ApplicationService.deleteApplicationById(applicationId)==true){
             RequestDispatcher rd = req.getRequestDispatcher("accountserve");

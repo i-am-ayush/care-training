@@ -1,5 +1,5 @@
-import FormPopulator.FormPopulator;
-import form.CloseAccountForm;
+package controller.servlet;
+
 import service.MemberService;
 
 import javax.servlet.ServletException;
@@ -9,13 +9,15 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class closeaccount extends HttpServlet {
+public class CloseAccountServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        CloseAccountForm closeAccountForm=FormPopulator.populate(req,CloseAccountForm.class);
-        int memberid = closeAccountForm.getId();
+
+        int memberid = Integer.parseInt(req.getParameter("id"));
+
         PrintWriter out = resp.getWriter();
+
         if(MemberService.deleteMemberById(memberid)==true){
             out.println("Account successfully closed");
         }

@@ -1,3 +1,5 @@
+package controller.servlet;
+
 import bean.Job;
 import bean.Member;
 import bean.Seeker;
@@ -19,7 +21,7 @@ public class SeekerAccountServlet extends HttpServlet {
 
         Member member = (Member) session.getAttribute("member");
         Seeker seeker = (Seeker) member;
-        List<Job> jobsPosted = SeekerService.allJobPostedBySeeker(seeker.getMemberId());
+        List<Job> jobsPosted = SeekerService.allJobPostedBySeeker(seeker.getId());
         req.setAttribute("jobposted", jobsPosted);
         RequestDispatcher rd = req.getRequestDispatcher("seekeraccount.jsp");
         rd.include(req, resp);

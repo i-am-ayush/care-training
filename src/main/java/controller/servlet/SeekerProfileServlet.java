@@ -1,5 +1,6 @@
-import bean.Job;
-import service.JobService;
+package controller.servlet;
+
+import bean.Seeker;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,19 +10,16 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-public class EditJobDetailsFormServlet extends HttpServlet {
+public class SeekerProfileServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        int id = Integer.parseInt(req.getParameter("id"));
-        Job job = JobService.getJobById(id);
-        req.setAttribute("updateJob", job);
-        HttpSession session = req.getSession();
-        session.setAttribute("Job", job);
-        RequestDispatcher rd = req.getRequestDispatcher("editjobdetails.jsp");
+        HttpSession session=req.getSession();
+        Seeker seeker=(Seeker)session.getAttribute("member");
+        RequestDispatcher rd = req.getRequestDispatcher("seekerprofile.jsp");
+        req.setAttribute("seeker",seeker);
         rd.forward(req, resp);
     }
-
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doPost(req, resp);
     }

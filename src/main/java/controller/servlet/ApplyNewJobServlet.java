@@ -1,3 +1,5 @@
+package controller.servlet;
+
 import bean.Job;
 import bean.Member;
 import service.ApplicationService;
@@ -12,7 +14,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
-public class ApplyNewJob extends HttpServlet {
+public class ApplyNewJobServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -1,3 +1,5 @@
+package controller.servlet;
+
 import FormPopulator.FormPopulator;
 import bean.Job;
 import bean.Seeker;
@@ -13,7 +15,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class PostNewJob extends HttpServlet {
+public class PostNewJobServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

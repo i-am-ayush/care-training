@@ -1,3 +1,5 @@
+package controller.servlet;
+
 import bean.Application;
 import bean.Job;
 import dto.ApplicantDto;
@@ -14,7 +16,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ApplicantList extends HttpServlet {
+public class ApplicantListServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
