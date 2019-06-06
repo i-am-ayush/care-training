@@ -1,4 +1,6 @@
 import bean.Member;
+import bean.Seeker;
+import bean.Sitter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,11 +20,15 @@ public class EditProfileForm extends HttpServlet {
         Member member = (Member) session.getAttribute("member");
 
         if(member.getType().equals(Member.MemberType.SEEKER)){
+            Seeker seeker=(Seeker)member;
             RequestDispatcher rd = req.getRequestDispatcher("editseekerprofile.jsp");
+            req.setAttribute("Seeker",seeker);
             rd.forward(req, resp);
         }
         else {
+            Sitter sitter=(Sitter)member;
             RequestDispatcher rd = req.getRequestDispatcher("editsitterprofile.jsp");
+            req.setAttribute("Sitter",sitter);
             rd.forward(req, resp);
         }
 

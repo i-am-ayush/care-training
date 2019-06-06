@@ -10,13 +10,13 @@
     String lastName = member.getLastName();
     String membertype = String.valueOf(member.getType());
     if(membertype.equals("SEEKER")){
-        profilePage = "seekerprofile.jsp";
+        profilePage = "seekerprofile";
         page2 = "Post New Job";
         page2url = "postnewjob.jsp";
         homepage = "seekeraccount.jsp";
     }
     else {
-        profilePage = "sitterprofile.jsp";
+        profilePage = "sitterprofile";
         page2 = "Apply New Job";
         page2url = "applynewjob";
         homepage = "sitteraccount.jsp";

@@ -92,6 +92,14 @@
     <servlet-name>EditJobDetailsFormServlet</servlet-name>
     <servlet-class>EditJobDetailsFormServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>SeekerProfile</servlet-name>
+    <servlet-class>SeekerProfile</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SeekerProfile</servlet-name>
+    <url-pattern>/seekerprofile</url-pattern>
+  </servlet-mapping>
   <servlet-mapping>
     <servlet-name>SitterAccount</servlet-name>
     <url-pattern>/sitteraccount</url-pattern>
