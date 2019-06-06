@@ -1,9 +1,11 @@
+import FormPopulator.FormPopulator;
 import bean.Member;
 import bean.Seeker;
 import bean.Sitter;
 import dao.MemberDao;
 import dao.SeekerDao;
 import dao.SitterDao;
+import form.LoginForm;
 import service.MemberService;
 import service.SeekerService;
 import service.SitterService;
@@ -20,7 +22,7 @@ import java.io.PrintWriter;
 public class login extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+      //  LoginForm loginForm=FormPopulator.populate(req,LoginForm.class);
         String email = req.getParameter("email");
         String password = req.getParameter("pass");
 

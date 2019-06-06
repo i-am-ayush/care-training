@@ -5,19 +5,21 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import FormPopulator.FormPopulator;
 import bean.Member;
 import bean.Seeker;
 import bean.Sitter;
 import dao.SeekerDao;
 import dao.SitterDao;
+import form.RegisterSitterForm;
 import service.SitterService;
 
 public class registersitter extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        RegisterSitterForm registerSitterForm= FormPopulator.populate(req,RegisterSitterForm.class);
         Sitter sitter = new Sitter();
-
         String memberType = req.getParameter("membertype");
         if(memberType.equals("sitter")){
             sitter.setType(Member.MemberType.SITTER);
@@ -25,17 +27,15 @@ public class registersitter extends HttpServlet {
         else if(memberType.equals("seeker")){
             sitter.setType(Member.MemberType.SEEKER);
         }
-        sitter.setFirstName(req.getParameter("firstname"));
-        sitter.setLastName(req.getParameter("lastname"));
-        sitter.setPhoneNumber(Integer.parseInt(req.getParameter("phone")));
-        sitter.setEmail(req.getParameter("email"));
-        sitter.setAddress(req.getParameter("address"));
-        sitter.setYearsOfExp(Integer.parseInt(req.getParameter("experience")));
-        sitter.setExpectedPay(Double.parseDouble(req.getParameter("expectedpay")));
-        sitter.setPassword(req.getParameter("password"));
-
+        sitter.setFirstName(registerSitterForm.getFirstname());
+        sitter.setLastName(registerSitterForm.getLastname());
+        sitter.setPhoneNumber(registerSitterForm.getPhone());
+        sitter.setEmail(registerSitterForm.getEmail());
+        sitter.setAddress(registerSitterForm.getAddress());
+        sitter.setYearsOfExp(registerSitterForm.getExperience());
+        sitter.setExpectedPay(registerSitterForm.getExpectedpay());
+        sitter.setPassword(registerSitterForm.getPassword());
         SitterService.registerSitter(sitter);
-
         PrintWriter out = resp.getWriter();
         out.println("Saved in Database");
 
