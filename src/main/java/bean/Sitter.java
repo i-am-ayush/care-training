@@ -2,6 +2,8 @@ package bean;
 
 public class Sitter extends Member {
     private int memberId;
+    private int yearsOfExp;
+    private double expectedPay;
 
     public int getMemberId() {
         return memberId;
@@ -26,7 +28,4 @@ public class Sitter extends Member {
     public void setExpectedPay(double expectedPay) {
         this.expectedPay = expectedPay;
     }
-
-    private int yearsOfExp;
-    private double expectedPay;
 }

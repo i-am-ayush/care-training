@@ -24,7 +24,7 @@ public class ProfileRedirect extends HttpServlet {
             rd.forward(req, resp);
         }
         else if(member.getType().equals(Member.MemberType.SITTER)){
-            RequestDispatcher rd = req.getRequestDispatcher("sitterprofile.jsp");
+            RequestDispatcher rd = req.getRequestDispatcher("sitterprofile");
             rd.forward(req, resp);
         }
 

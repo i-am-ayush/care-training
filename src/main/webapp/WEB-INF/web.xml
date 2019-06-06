@@ -96,6 +96,15 @@
     <servlet-name>SeekerProfile</servlet-name>
     <servlet-class>SeekerProfile</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>SitterProfileServlet</servlet-name>
+    <servlet-class>SitterProfileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SitterProfileServlet</servlet-name>
+    <url-pattern>/sitterprofile</url-pattern>
+  </servlet-mapping>
+
   <servlet-mapping>
     <servlet-name>SeekerProfile</servlet-name>
     <url-pattern>/seekerprofile</url-pattern>

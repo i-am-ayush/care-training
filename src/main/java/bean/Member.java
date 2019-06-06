@@ -4,9 +4,13 @@ public class Member {
     private int id;
     private String firstName;
     private String lastName;
-
-    public enum Status {ACTIVE, INACTIVE}
     private Status status;
+    private int phoneNumber;
+    private String email;
+    private String address;
+    private String password;
+    private MemberType type;
+
     public Status getStatus() {
         return status;
     }
@@ -15,9 +19,6 @@ public class Member {
         this.status = status;
     }
 
-    private int phoneNumber;
-
-
     public String getPassword() {
         return password;
     }
@@ -25,11 +26,6 @@ public class Member {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    private String email;
-    private String address;
-    private String password;
-    private MemberType type;
 
     public int getId() {
         return id;
@@ -86,6 +82,9 @@ public class Member {
     public void setType(MemberType type) {
         this.type = type;
     }
+
+    public enum Status {ACTIVE, INACTIVE}
+
     public enum MemberType {
         SITTER, SEEKER;
 
