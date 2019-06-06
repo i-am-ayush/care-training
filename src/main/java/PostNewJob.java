@@ -22,11 +22,10 @@ public class PostNewJob extends HttpServlet {
        PostNewJobForm postNewJobForm=FormPopulator.populate(req, PostNewJobForm.class);
         Job job = new Job();
         job.setTitle(postNewJobForm.getTitle());
-        job.setPostedBy(seeker.getMemberId());
+        job.setPostedBy(seeker.getId());
         job.setStartDateTime(postNewJobForm.getStartDate());
         job.setEndDateTime(postNewJobForm.getEndDate());
         job.setPayPerHour(postNewJobForm.getPayPerHour());
-        System.out.println(job.getPostedBy());
         if (JobService.save(job) == true) {
             RequestDispatcher rd = req.getRequestDispatcher("accountserve");
             rd.forward(req, resp);
