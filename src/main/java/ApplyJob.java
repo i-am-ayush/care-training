@@ -1,5 +1,7 @@
+import FormPopulator.FormPopulator;
 import bean.Application;
 import bean.Member;
+import form.ApplyJobForm;
 import service.ApplicationService;
 
 import javax.servlet.RequestDispatcher;
@@ -15,19 +17,14 @@ public class ApplyJob extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        ApplyJobForm applyJobForm=FormPopulator.populate(req,ApplyJobForm.class);
         Application application = new Application();
         HttpSession session = req.getSession();
-        int jobId = Integer.parseInt(req.getParameter("jobId"));
-        double expectedPay = Double.parseDouble(req.getParameter("expectedPay"));
+        application.setJobId(applyJobForm.getJobId());
+        application.setExpectedPay(applyJobForm.getExpectedPay());
         Member member = (Member) session.getAttribute("member");
         int memberId = member.getId();
-
-        application.setJobId(jobId);
         application.setMemberId(memberId);
-        application.setExpectedPay(expectedPay);
-
-
         if(ApplicationService.apply(application)){
             RequestDispatcher rd = req.getRequestDispatcher("accountserve");
             rd.forward(req, resp);

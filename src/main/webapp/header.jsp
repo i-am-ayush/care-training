@@ -13,13 +13,13 @@
         profilePage = "seekerprofile";
         page2 = "Post New Job";
         page2url = "postnewjob.jsp";
-        homepage = "seekeraccount.jsp";
+        homepage = "seekeraccount";
     }
     else {
         profilePage = "sitterprofile";
         page2 = "Apply New Job";
         page2url = "applynewjob";
-        homepage = "sitteraccount.jsp";
+        homepage = "sitteraccount";
     }
 %>
 

@@ -3,22 +3,25 @@ package bean;
 public class Application {
 
     private int applicationId;
+    private Status status;
+    private int jobId;
+    private int memberId;
+    private double expectedPay;
 
     public int getApplicationId() {
         return applicationId;
     }
-    public enum Status {ACTIVE, INACTIVE}
-    private Status status;
+
+    public void setApplicationId(int applicationId) {
+        this.applicationId = applicationId;
+    }
+
     public Status getStatus() {
         return status;
     }
 
     public void setStatus(Status status) {
         this.status = status;
-    }
-
-    public void setApplicationId(int applicationId) {
-        this.applicationId = applicationId;
     }
 
     public int getJobId() {
@@ -44,8 +47,5 @@ public class Application {
     public void setExpectedPay(double expectedPay) {
         this.expectedPay = expectedPay;
     }
-
-    private int jobId;
-    private int memberId;
-    private double expectedPay;
+    public enum Status {ACTIVE, INACTIVE}
 }
