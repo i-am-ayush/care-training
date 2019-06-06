@@ -27,21 +27,6 @@ public class SitterAccountServlet extends HttpServlet {
         Sitter sitter = (Sitter) member;
         List<SitterProfileHome> list = SitterService.allAppliedJobBySitter(sitter.getId());
 
-//        for (Map<String, Object> appliedjobs : list) {
-//            String title = "", payperhour = "", expectedpay = "", status = "", disabled = "";
-//            int appid = 0;
-//            for (Map.Entry<String, Object> applicationdetails : appliedjobs.entrySet()) {
-//                System.out.println(applicationdetails.getKey());
-//                System.out.println(applicationdetails.getValue());
-//                req.setAttribute(applicationdetails.getKey(), applicationdetails.getValue());
-//            }
-//        }
-        for(int i=0;i<list.size();i++) {
-
-            System.out.println(list.get(i).getTitle());
-            System.out.println(list.get(i).getStatus());
-            System.out.println(list.get(i).getApplicationId());
-        }
         RequestDispatcher rd = req.getRequestDispatcher("sitteraccount.jsp");
         req.setAttribute("appliedJobList",list);
         rd.forward(req, resp);

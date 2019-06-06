@@ -1,6 +1,7 @@
 package service;
 
 import bean.Member;
+import dao.ApplicationDao;
 import dao.JobDao;
 import dao.MemberDao;
 
@@ -29,8 +30,14 @@ public class MemberService {
     }
     public static boolean deleteMemberById(int id){
        MemberDao.delete(id);
-       JobService.deletebyId(id);
-       return true;
+       if(MemberDao.getById(id).getType().equals(Member.MemberType.SEEKER)) {
+           JobService.deletebyId(id);
+           return true;
+       }
+       else{
+           return ApplicationDao.deleteByuserId(id);
+
+       }
     }
 
     public static List<Member> search(String email){
