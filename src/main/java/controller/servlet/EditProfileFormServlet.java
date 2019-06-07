@@ -24,13 +24,13 @@ public class EditProfileFormServlet extends HttpServlet {
         if(member.getType().equals(Member.MemberType.SEEKER)){
             Seeker seeker=(Seeker)member;
             RequestDispatcher rd = req.getRequestDispatcher("editseekerprofile.jsp");
-            req.setAttribute("Seeker",seeker);
+            req.setAttribute("seeker",seeker);
             rd.forward(req, resp);
         }
         else {
             Sitter sitter=(Sitter)member;
             RequestDispatcher rd = req.getRequestDispatcher("editsitterprofile.jsp");
-            req.setAttribute("Sitter",sitter);
+            req.setAttribute("sitter",sitter);
             rd.forward(req, resp);
         }
 

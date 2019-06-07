@@ -18,7 +18,7 @@ public class EditSeekerProfileServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RegisterSeekerForm editSeekerForm= FormPopulator.populate(req,RegisterSeekerForm.class);
+        RegisterSeekerForm editSeekerForm= FormPopulator.populateFrom(req,RegisterSeekerForm.class);
         Seeker seeker = new Seeker();
         Member member = new Member();
         HttpSession session = req.getSession();

@@ -18,7 +18,7 @@ public class EditSitterProfileServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RegisterSitterForm registerSitterForm=FormPopulator.populate(req,RegisterSitterForm.class);
+        RegisterSitterForm registerSitterForm=FormPopulator.populateFrom(req,RegisterSitterForm.class);
         Sitter sitter = new Sitter();
         HttpSession session = req.getSession();
         Member member = (Member) session.getAttribute("member");
