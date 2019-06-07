@@ -5,8 +5,6 @@ import java.util.Map;
 
 public class LoginForm extends Form {
     private String email;
-    private String pass;
- //   private Map<String, String> errorMessage;
 
     public String getEmail() {
         return email;
@@ -16,13 +14,17 @@ public class LoginForm extends Form {
         this.email = email;
     }
 
-    public String getPass() {
-        return pass;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPass(String pass) {
-        this.pass = pass;
+    public void setPassword(String password) {
+        this.password = password;
     }
+
+    private String password;
+ //   private Map<String, String> errorMessage;
+
 
 //    public Map<String, String> vaidate() {
 //        errorMessage = new HashMap<>();

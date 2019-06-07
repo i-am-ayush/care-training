@@ -25,13 +25,13 @@ public class EditSeekerProfileServlet extends HttpServlet {
         member = (Member) session.getAttribute("member");
         seeker.setType(Member.MemberType.SEEKER);
         seeker.setId(member.getId());
-        seeker.setFirstName(editSeekerForm.getFirstname());
-        seeker.setLastName(editSeekerForm.getLastname());
+        seeker.setFirstName(editSeekerForm.getFirstName());
+        seeker.setLastName(editSeekerForm.getLastName());
         seeker.setPhoneNumber(editSeekerForm.getPhone());
         seeker.setEmail(editSeekerForm.getEmail());
         seeker.setAddress(editSeekerForm.getAddress());
-        seeker.setSpouseName(editSeekerForm.getSpousename());
-        seeker.setNoOfChildren(editSeekerForm.getChildren());
+        seeker.setSpouseName(editSeekerForm.getSpouseName());
+        seeker.setNoOfChildren(editSeekerForm.getNoOfChildren());
         seeker.setPassword(editSeekerForm.getPassword());
         SeekerService.editProfile(seeker);
         RequestDispatcher rd = req.getRequestDispatcher("profileredirect");

@@ -312,26 +312,4 @@ public class ApplicationDao {
         return false;
     }
 
-    //   public static void main(String[] args) {
-//        Application ap=new Application();
-//        ap.setMemberId(8);
-//        ap.setJobId(2);
-//        ap.setPayPerHour(900);
-//        save(ap);
-//        List<Map<String, Object>> l = new ArrayList<>();
-//
-//        l = ApplicationDao.getAllJobBySitter(1);
-//        for (int i = 0; i < l.size(); i++) {
-//            System.out.println("------------neww job-----------");
-//            for (Map.Entry<String, Object> entry : l.get(i).entrySet()) {
-//                System.out.println("Key = " + entry.getKey() +
-//                        ", Value = " + entry.getValue());
-//            }
-//        }
-//    List<Application> list=new ArrayList<>();
-//    list=getAllApplication();
-//        System.out.println(list);
-//    Application a=getById(1);
-//        System.out.println(a.getJobId());
-    //  }
 }

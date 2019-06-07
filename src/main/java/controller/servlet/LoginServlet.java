@@ -26,7 +26,7 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         LoginForm loginForm=FormPopulator.populate(req,LoginForm.class);
         String email = loginForm.getEmail();
-        String password = loginForm.getPass();
+        String password = loginForm.getPassword();
         Member member = new Member();
         Sitter sitter = new Sitter();
         Seeker seeker = new Seeker();

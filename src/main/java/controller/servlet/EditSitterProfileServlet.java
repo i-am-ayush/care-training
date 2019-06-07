@@ -2,10 +2,8 @@ package controller.servlet;
 
 import FormPopulator.FormPopulator;
 import bean.Member;
-import bean.Seeker;
 import bean.Sitter;
 import form.RegisterSitterForm;
-import service.SeekerService;
 import service.SitterService;
 
 import javax.servlet.RequestDispatcher;
@@ -26,13 +24,13 @@ public class EditSitterProfileServlet extends HttpServlet {
         Member member = (Member) session.getAttribute("member");
         sitter.setType(Member.MemberType.SITTER);
         sitter.setId(member.getId());
-        sitter.setFirstName(registerSitterForm.getFirstname());
-        sitter.setLastName(registerSitterForm.getLastname());
+        sitter.setFirstName(registerSitterForm.getFirstName());
+        sitter.setLastName(registerSitterForm.getLastName());
         sitter.setPhoneNumber(registerSitterForm.getPhone());
         sitter.setEmail(registerSitterForm.getEmail());
         sitter.setAddress(registerSitterForm.getAddress());
         sitter.setYearsOfExp(registerSitterForm.getExperience());
-        sitter.setExpectedPay(registerSitterForm.getExpectedpay());
+        sitter.setExpectedPay(registerSitterForm.getExpectedPay());
         sitter.setPassword(registerSitterForm.getPassword());
         SitterService.editProfile(sitter);
         RequestDispatcher rd = req.getRequestDispatcher("profileredirect");

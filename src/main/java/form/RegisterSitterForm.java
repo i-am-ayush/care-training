@@ -1,29 +1,24 @@
 package form;
 
-import service.MemberService;
-
-import java.util.HashMap;
-import java.util.Map;
-
-public class RegisterSitterForm extends Form {
-    private String firstname;
-    private String lastname;
-    private double expectedpay;
+public class RegisterSitterForm extends RegisterMemberForm {
+//    private String firstname;
+//    private String lastname;
+    private double expectedPay;
     private int experience;
     //public enum Status {ACTIVE, INACTIVE}
     //private Status status;
-    private int phone;
-    private String email;
-    private String address;
-    private String password;
+//    private int phone;
+//    private String email;
+//    private String address;
+//    private String password;
   //  private Map<String, String> errorMessage;
 
-    public double getExpectedpay() {
-        return expectedpay;
+    public double getExpectedPay() {
+        return expectedPay;
     }
 
-    public void setExpectedpay(double expectedpay) {
-        this.expectedpay = expectedpay;
+    public void setExpectedPay(double expectedPay) {
+        this.expectedPay = expectedPay;
     }
 
     public int getExperience() {
@@ -42,33 +37,33 @@ public class RegisterSitterForm extends Form {
         this.experience = experience;
     }
 
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public int getPhone() {
-        return phone;
-    }
-
-    public void setPhone(int phone) {
-        this.phone = phone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
+//    public String getFirstName() {
+//        return firstname;
+//    }
+//
+//    public void setFirstName(String firstname) {
+//        this.firstname = firstname;
+//    }
+//
+//    public String getLastname() {
+//        return lastname;
+//    }
+//
+//    public void setLastname(String lastname) {
+//        this.lastname = lastname;
+//    }
+//
+//    public int getPhone() {
+//        return phone;
+//    }
+//
+//    public void setPhone(int phone) {
+//        this.phone = phone;
+//    }
+//
+//    public String getEmail() {
+//        return email;
+//    }
 
 //
 //    public Member getMembertype() {
@@ -78,26 +73,26 @@ public class RegisterSitterForm extends Form {
 //    public void setMembertype(Member membertype) {
 //        this.membertype = membertype;
 //    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
+//
+//    public void setEmail(String email) {
+//        this.email = email;
+//    }
+//
+//    public String getAddress() {
+//        return address;
+//    }
+//
+//    public void setAddress(String address) {
+//        this.address = address;
+//    }
+//
+//    public String getPassword() {
+//        return password;
+//    }
+//
+//    public void setPassword(String password) {
+//        this.password = password;
+//    }
 
 //    public Map<String, String> vaidate() {
 //        errorMessage = new HashMap<>();
@@ -112,8 +107,8 @@ public class RegisterSitterForm extends Form {
 //    }
 //
 //    private void validateexpectedPay() {
-//        if (expectedpay <= 0.0) {
-//            errorMessage.put("expectedpay", "expected pay is not valid");
+//        if (expectedPay <= 0.0) {
+//            errorMessage.put("expectedPay", "expected pay is not valid");
 //        }
 //    }
 //

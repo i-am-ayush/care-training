@@ -38,13 +38,11 @@
     <input type="radio" value="sitter" name="membertype" id="radiositter_selected" onclick="viewform()">
 
     <form id="seekerform" action="registerseeker" method="post">
-        <h4>Seeker Form</h4>
-        <label for="radioseeker">Seeker:</label>
-        <div class="form-group"><input type="radio" value="seeker" name="membertype" id="radioseeker"></div>
+        <div class="form-group"><input type="radio" value="seeker" name="membertype" id="radioseeker" hidden></div>
         <label for="firstname">First name:</label>
-        <div class="form-group"><input class="form-control" type="text" name="firstname" id="firstname"></div>
+        <div class="form-group"><input class="form-control" type="text" name="firstName" id="firstName"></div>
         <label for="lastname">Last name:</label>
-        <div class="form-group"><input class="form-control" type="text" name="lastname" id="lastname"></div>
+        <div class="form-group"><input class="form-control" type="text" name="lastName" id="lastName"></div>
         <label for="phone">Phone number:</label>
         <div class="form-group"><input class="form-control" type="text" name="phone" id="phone"></div>
         <label for="email">Email:</label>
@@ -52,22 +50,20 @@
         <label for="address">Address:</label>
         <div class="form-group"><input class="form-control" type="text" name="address" id="address"></div>
         <label for="spousename">Spouse name:</label>
-        <div class="form-group"><input class="form-control" type="text" name="spousename" id="spousename"></div>
+        <div class="form-group"><input class="form-control" type="text" name="spouseName" id="spouseName"></div>
         <label for="children">No of Children:</label>
-        <div class="form-group"><input class="form-control" type="text" name="children" id="children"></div>
+        <div class="form-group"><input class="form-control" type="text" name="noOfChildren" id="noOfChildren"></div>
         <label for="password">Password:</label>
         <div class="form-group"><input class="form-control" type="password" name="password" id="password"></div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
     <form id="sitterform" action="registersitter" method="post">
-        <h4>Sitter Form</h4>
-        <label for="radiositter">Sitter:</label>
-        <div class="form-group"><input type="radio" value="sitter" name="membertype" id="radiositter"></div>
+        <div class="form-group"><input type="radio" value="sitter" name="membertype" id="radiositter" hidden></div>
         <label for="firstname">First name:</label>
-        <div class="form-group"><input class="form-control" type="text" name="firstname" id="firstname"></div>
+        <div class="form-group"><input class="form-control" type="text" name="firstName" id="firstName"></div>
         <label for="lastname">Last name:</label>
-        <div class="form-group"><input class="form-control" type="text" name="lastname" id="lastname"></div>
+        <div class="form-group"><input class="form-control" type="text" name="lastName" id="lastName"></div>
         <label for="phone">Phone number:</label>
         <div class="form-group"><input class="form-control" type="text" name="phone" id="phone"></div>
         <label for="email">Email:</label>
@@ -77,7 +73,7 @@
         <label for="experience">Experience:</label>
         <div class="form-group"><input class="form-control" type="text" name="experience" id="experience"></div>
         <label for="expectedpay">Expected Pay:</label>
-        <div class="form-group"><input class="form-control" type="text" name="expectedpay" id="expectedpay"></div>
+        <div class="form-group"><input class="form-control" type="text" name="expectedPay" id="expectedPay"></div>
         <label for="password">Password:</label>
         <div class="form-group"><input class="form-control" type="password" name="password" id="password"></div>
         <button type="submit" class="btn btn-primary">Submit</button>

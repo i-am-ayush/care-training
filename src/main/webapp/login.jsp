@@ -1,3 +1,5 @@
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<%@ page isELIgnored="false" %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,7 +12,9 @@
     <title>Login</title>
 </head>
 <body class="container">
+<c:if test="${not empty requestScope.success}">
 
+</c:if>
 <form method="post" action="login">
     <div style="text-align: center;">
         <table class="table" border="1" width="30%" cellpadding="3">
@@ -26,14 +30,21 @@
             </tr>
             <tr>
                 <td>Password</td>
-                <td><div class="form-group"><input type="password" name="pass" value="" class="form-control" /></div></td>
+                <td><div class="form-group"><input type="password" name="password" value="" class="form-control" /></div></td>
             </tr>
+
             <tr>
-                <td><button type="submit" class="btn btn-primary">Login</button></td>
-                <td><button type="reset" class="btn">Reset</button></td>
-            </tr>
-            <tr>
+            <c:if test="${empty requestScope.success}">
                 <td colspan="2">Yet Not Registered!! <a href="register.jsp">Register Here</a></td>
+            </c:if>
+            <c:if test="${not empty requestScope.success}">
+                    <td colspan="2"> ${requestScope.success}</td>
+            </c:if>
+            </tr>
+            <tr>
+                    <td><button type="reset" class="btn">Reset</button></td>
+                <td><button type="submit" class="btn btn-primary">Login</button></td>
+
             </tr>
             </tbody>
         </table>

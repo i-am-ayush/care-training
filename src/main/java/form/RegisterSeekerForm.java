@@ -1,29 +1,9 @@
 package form;
 
-import service.MemberService;
+public class RegisterSeekerForm extends RegisterMemberForm {
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class RegisterSeekerForm extends Form {
-    private String firstname;
-    private String lastname;
-    //public enum Status {ACTIVE, INACTIVE}
-    //private Status status;
-    private int phone;
-    private String email;
-    private String address;
-    private String password;
-
-    //    public Status getStatus() {
-//        return status;
-//    }
-//
-//    public void setStatus(Status status) {
-//        this.status = status;
-//    }
-    private String spousename;
-    private int children;
+    private String spouseName;
+    private int noOfChildren;
     //    private Member membertype;
 //    public enum Member{SEEKER,SITTER;
 //        public static Member stringToEnum(String s) {
@@ -33,76 +13,21 @@ public class RegisterSeekerForm extends Form {
 //        }}
  //   private Map<String, String> errorMessage;
 
-    public String getFirstname() {
-        return firstname;
+
+    public String getSpouseName() {
+        return spouseName;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setSpouseName(String spouseName) {
+        this.spouseName = spouseName;
     }
 
-    public String getLastname() {
-        return lastname;
+    public int getNoOfChildren() {
+        return noOfChildren;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public int getPhone() {
-        return phone;
-    }
-
-    public void setPhone(int phone) {
-        this.phone = phone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-//    public Member getMembertype() {
-//        return membertype;
-//    }
-//
-//    public void setMembertype(Member membertype) {
-//        this.membertype = membertype;
-//    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getSpousename() {
-        return spousename;
-    }
-
-    public void setSpousename(String spousename) {
-        this.spousename = spousename;
-    }
-
-    public int getChildren() {
-        return children;
-    }
-
-    public void setChildren(int children) {
-        this.children = children;
+    public void setNoOfChildren(int noOfChildren) {
+        this.noOfChildren = noOfChildren;
     }
 
 //    public Map<String, String> vaidate() {
@@ -118,26 +43,26 @@ public class RegisterSeekerForm extends Form {
 //    }
 //
 //    private void validateNoOfChildren() {
-//        if (String.valueOf(children).isEmpty()) {
+//        if (String.valueOf(noOfChildren).isEmpty()) {
 //            errorMessage.put("No of Children", "Can't be empty!");
-//        } else if (!String.valueOf(children).matches("^0$|^[1-9][0-9]*$")) {
+//        } else if (!String.valueOf(noOfChildren).matches("^0$|^[1-9][0-9]*$")) {
 //            errorMessage.put("No of Children", "No zeros before any number allowed!");
 //        }
 //    }
 //
 //    private void validateSpouseName() {
-//        if (spousename.isEmpty()) {
-//            errorMessage.put("spousename", "Can't be empty!");
-//        } else if (!spousename.matches("[A-za-z]+")) {
-//            errorMessage.put("spousename", "Only characters allowed!");
+//        if (spouseName.isEmpty()) {
+//            errorMessage.put("spouseName", "Can't be empty!");
+//        } else if (!spouseName.matches("[A-za-z]+")) {
+//            errorMessage.put("spouseName", "Only characters allowed!");
 //        }
 //    }
 //
 //    private void validateFirstName() {
-//        if (firstname.isEmpty()) {
-//            errorMessage.put("firstname", "firstname can't be empty!");
-//        } else if (!firstname.matches("[A-za-z]+"))
-//            errorMessage.put("firstname", "firstname should consist of only alphabets");
+//        if (firstName.isEmpty()) {
+//            errorMessage.put("firstName", "firstName can't be empty!");
+//        } else if (!firstName.matches("[A-za-z]+"))
+//            errorMessage.put("firstName", "firstName should consist of only alphabets");
 //    }
 //
 //    private void validateLastName() {

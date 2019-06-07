@@ -164,16 +164,4 @@ public class MemberDao {
         return list;
     }
 
-//    public static void main(String[] args) {
-//        List<Member> g=getAllMember();
-//        for(int i=0;i<g.size();i++){
-//                System.out.println(g.get(i).getType());
-//            }
-//       Member m= getById(1);
-//        System.out.println(m.getEmail());
-//        Member m=getByEmailIdAndPassword("harsh@gmail.com","harsh123");
-//        Member m1=getByEmailId("harsh@gmail.com");
-//        System.out.println(m.getLastName());
-//        System.out.println(m1.getLastName());
-//    }
 }
